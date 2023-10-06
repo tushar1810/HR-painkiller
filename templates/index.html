@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Scanner</title>
+</head>
+<body>
+    <h1>CV Processor</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <label for="cv_file">Upload CV File (PDF):</label><br>
+        <input type="file" id="cv_file" name="cv_file" accept=".pdf"><br>
+        <input type="submit" value="Process CV">
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Processor</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8+gFqFqNSm3pCDek/xzmAhi7tuYNZx3Hi6lOt9u5ZBnI3VdUajqDJJ+H2Wr+r" crossorigin="anonymous">
+    <style>
+        /* Custom styles go here */
+        body {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #6c757d; /* Lighter background color */
+            border-color: #6c757d;
+            color: #fff; /* Text color */
+        }
+        .btn-primary:hover {
+            background-color: #495057;
+            border-color: #495057;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">CV Processor</h1>
+        <form method="post" action="/" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="cv_file" class="form-label">Upload CV File (PDF):</label>
+                <input type="file" class="form-control" id="cv_file" name="cv_file" accept=".pdf">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Process CV</button>
+        </form>
+        {% if result %}
+            <div class="result mt-4">
+                <h2>Result:</h2>
+                <p class="lead">{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js" integrity="sha384-v1t6N0jQkL+ssqFYeG0Kn6fuX+gWvseBF5wK86HxIlelfs6DbQJPOeNnh2F/BZfru" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-gbOy51GBlzInIx6KlAgd9PYIAQm9jQoFV8cAnUAlL/DlDZLjge4pfmIoGM9F1PaX" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
